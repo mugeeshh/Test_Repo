@@ -14,6 +14,10 @@ class Cart {
  Customer: Nike
 SKUs Scanned: `premium`, `premium`, `premium`, `premium`
 Total expected: $1519.96
+Customer: default ID
+added: `classic`, `standout`, `premium`
+Total expected: $987.97
+
 */	
 	void run(){
 		/*Cart crt=new Cart();
@@ -32,10 +36,19 @@ Total expected: $1519.96
 		item.setSkuPremium("premium");
 		item.setPremiumQuantity(1);*/
 		
-		OrderItem item=new OrderItem();
+		/*OrderItem item=new OrderItem();
 		item.setCsutomerID("NIKE");
 		item.setSkuPremium("premium");
 		item.setPremiumQuantity(4);
+		*/
+		OrderItem item=new OrderItem();
+		item.setCsutomerID("defaultID");
+		item.setSkuPremium("premium");
+		item.setPremiumQuantity(1);
+		item.setSkuClassic("classic");
+		item.setClassicQuantity(1);
+		item.setSkuStandout("standout");
+		item.setStandoutQuantity(1);		
 		
 		double price = totalPrice(item);
 		System.out.println("price==>>"+price);
